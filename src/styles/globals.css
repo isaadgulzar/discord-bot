@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  @apply !font-montserrat;
+}
+
+@layer components {
+
+  .nav-link {
+    @apply text-sm font-light hover:text-primary cursor-pointer
+  }
+  .mobile-nav-link {
+    @apply text-sm font-medium pt-3;
+  }
+  .btn {
+    @apply flex-shrink-0 border border-transparent hover:-translate-y-2 transition-all duration-500 flex items-center justify-center gap-3 text-sm px-4 py-2 rounded-full font-medium
+  }
+  .btn-primary {
+    @apply btn bg-primary hover:bg-primary border-primary text-gray-900
+  }
+  .btn-outline-primary {
+    @apply btn bg-transparent border-primary text-primary
+  }
+
+  .footer-section-heading {
+    @apply text-sm font-semibold leading-6 text-white
+  }
+  .footer-link {
+    @apply text-sm leading-6 text-gray-300 hover:text-white
+  }
+}
+
+
+.animate-moveBorder {
+  background: linear-gradient(to left, #66ccff95, #66ccff10);
+  animation: moveBorder 10s linear infinite;
+}
+@keyframes moveBorder {
+  0%,
+  100% {
+    transform: translateX(-100%);
+  }
+  25% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  75% {
+    transform: translateY(100%);
+  }
+}
